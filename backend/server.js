@@ -1,11 +1,11 @@
-dotenv.config();
+import 'dotenv/config';
 console.log('API KEY loaded:', !!process.env.OPENAI_API_KEY);
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import rateLimit from "express-rate-limit";
-import dotenv from "dotenv";
+
 
 import { connectDB } from "./config/db.js";
 import authRoutes from "./routes/auth.routes.js";
